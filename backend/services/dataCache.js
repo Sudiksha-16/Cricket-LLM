@@ -2,7 +2,6 @@ const NodeCache = require("node-cache")
 
 class DataCache {
   constructor() {
-    // Cache for 10 minutes for live data, 1 hour for static data
     this.cache = new NodeCache({ stdTTL: 600 })
   }
 
@@ -22,9 +21,8 @@ class DataCache {
     return this.cache.flushAll()
   }
 
-  // Specific methods for cricket data
   setLiveMatches(data) {
-    return this.set("live_matches", data, 300) // 5 minutes for live data
+    return this.set("live_matches", data, 300) 
   }
 
   getLiveMatches() {
@@ -32,7 +30,7 @@ class DataCache {
   }
 
   setNews(data) {
-    return this.set("cricket_news", data, 1800) // 30 minutes for news
+    return this.set("cricket_news", data, 1800)
   }
 
   getNews() {
@@ -40,7 +38,7 @@ class DataCache {
   }
 
   setPlayerData(playerId, data) {
-    return this.set(`player_${playerId}`, data, 3600) // 1 hour for player data
+    return this.set(`player_${playerId}`, data, 3600) 
   }
 
   getPlayerData(playerId) {
@@ -49,3 +47,4 @@ class DataCache {
 }
 
 module.exports = new DataCache()
+
