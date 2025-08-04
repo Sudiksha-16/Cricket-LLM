@@ -1,0 +1,371 @@
+.player-history-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.search-section {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.search-section h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.search-bar {
+  display: flex;
+  max-width: 600px;
+  margin: 0 auto;
+  gap: 15px;
+}
+
+.search-bar input {
+  flex: 1;
+  padding: 15px 20px;
+  border: 2px solid #dee2e6;
+  border-radius: 10px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.search-bar input:focus {
+  outline: none;
+  border-color: #2a5298;
+}
+
+.search-bar button {
+  background: linear-gradient(135deg, #2a5298 0%, #1e3c72 100%);
+  color: white;
+  border: none;
+  padding: 15px 25px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: transform 0.3s ease;
+  white-space: nowrap;
+}
+
+.search-bar button:hover:not(:disabled) {
+  transform: translateY(-2px);
+}
+
+.search-bar button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.content-section {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.search-results {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.search-results h3 {
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+.players-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.player-card {
+  background: #f8f9fa;
+  border: 2px solid #dee2e6;
+  border-radius: 10px;
+  padding: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.player-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  border-color: #2a5298;
+}
+
+.player-card.selected {
+  border-color: #2a5298;
+  background: linear-gradient(135deg, #e3f2fd 0%, #f8f9fa 100%);
+}
+
+.player-info h4 {
+  color: #333;
+  margin-bottom: 8px;
+  font-size: 1.2rem;
+}
+
+.player-info p {
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.player-role {
+  background: #2a5298;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.player-details-section {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.player-header {
+  border-bottom: 2px solid #dee2e6;
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+}
+
+.player-header h2 {
+  color: #333;
+  margin-bottom: 15px;
+  font-size: 2rem;
+}
+
+.player-meta {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.country,
+.role {
+  background: #f8f9fa;
+  padding: 8px 16px;
+  border-radius: 20px;
+  color: #666;
+  font-weight: 500;
+}
+
+.basic-info,
+.career-stats,
+.teams-section {
+  margin-bottom: 30px;
+}
+
+.basic-info h3,
+.career-stats h3,
+.teams-section h3 {
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 1.4rem;
+  border-left: 4px solid #2a5298;
+  padding-left: 15px;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.info-item {
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 8px;
+  border-left: 3px solid #2a5298;
+}
+
+.info-label {
+  display: block;
+  font-weight: 600;
+  color: #666;
+  margin-bottom: 5px;
+  font-size: 0.9rem;
+}
+
+.info-value {
+  color: #333;
+  font-weight: 500;
+}
+
+.format-stats {
+  margin-bottom: 25px;
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.format-stats h4 {
+  color: #2a5298;
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 12px;
+}
+
+.stat-item {
+  background: white;
+  padding: 12px;
+  border-radius: 6px;
+  text-align: center;
+  border: 1px solid #dee2e6;
+}
+
+.stat-label {
+  display: block;
+  font-size: 0.8rem;
+  color: #666;
+  margin-bottom: 4px;
+  text-transform: capitalize;
+}
+
+.stat-value {
+  font-weight: 700;
+  color: #333;
+  font-size: 1.1rem;
+}
+
+.teams-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.team-badge {
+  background: #2a5298;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.no-results,
+.no-details {
+  text-align: center;
+  padding: 40px 20px;
+  color: #666;
+}
+
+.no-results h3,
+.no-details h3 {
+  color: #333;
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+}
+
+.search-prompt {
+  text-align: center;
+  padding: 60px 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.search-prompt h3 {
+  color: #333;
+  margin-bottom: 15px;
+  font-size: 1.8rem;
+}
+
+.search-prompt p {
+  color: #666;
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+}
+
+.popular-searches h4 {
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+}
+
+.search-suggestions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.search-suggestions .suggestion-btn {
+  background: #f8f9fa;
+  border: 2px solid #dee2e6;
+  color: #495057;
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.search-suggestions .suggestion-btn:hover {
+  background: #2a5298;
+  border-color: #2a5298;
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .player-history-container {
+    padding: 15px;
+  }
+
+  .search-section h1 {
+    font-size: 2rem;
+  }
+
+  .search-bar {
+    flex-direction: column;
+    max-width: 100%;
+  }
+
+  .search-bar button {
+    align-self: stretch;
+  }
+
+  .players-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .player-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .player-meta {
+    justify-content: center;
+  }
+
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .search-suggestions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .search-suggestions .suggestion-btn {
+    width: 100%;
+    max-width: 300px;
+  }
+}
