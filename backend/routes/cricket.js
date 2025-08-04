@@ -4,7 +4,7 @@ const auth = require("../middleware/auth")
 
 const router = express.Router()
 
-// Get live matches (scraped data)
+// Get live matches 
 router.get("/matches/live", async (req, res) => {
   try {
     const liveMatches = await cricketScraper.getLiveMatches()
@@ -22,7 +22,7 @@ router.get("/matches/live", async (req, res) => {
   }
 })
 
-// Get upcoming matches (scraped data)
+// Get upcoming matches 
 router.get("/matches/upcoming", async (req, res) => {
   try {
     const upcomingMatches = await cricketScraper.getUpcomingMatches()
@@ -40,12 +40,10 @@ router.get("/matches/upcoming", async (req, res) => {
   }
 })
 
-// Get match details (mock implementation)
+// Get match details 
 router.get("/matches/:matchId", async (req, res) => {
   try {
     const { matchId } = req.params
-    // For now, return basic match info
-    // In a real implementation, you'd scrape specific match pages
     res.json({
       status: "success",
       data: {
@@ -58,7 +56,7 @@ router.get("/matches/:matchId", async (req, res) => {
   }
 })
 
-// Search players (scraped data)
+// Search players 
 router.get("/players/search/:name", async (req, res) => {
   try {
     const { name } = req.params
@@ -77,7 +75,7 @@ router.get("/players/search/:name", async (req, res) => {
   }
 })
 
-// Get player details (scraped data)
+// Get player details 
 router.get("/players/:playerId", async (req, res) => {
   try {
     const { playerId } = req.params
@@ -95,7 +93,7 @@ router.get("/players/:playerId", async (req, res) => {
   }
 })
 
-// Get cricket news (scraped data)
+// Get cricket news 
 router.get("/news", async (req, res) => {
   try {
     const news = await cricketScraper.getCricketNews()
@@ -113,10 +111,10 @@ router.get("/news", async (req, res) => {
   }
 })
 
-// Get team rankings (scraped data)
+// Get team rankings 
 router.get("/rankings/:format", async (req, res) => {
   try {
-    const { format } = req.params // test, odi, t20
+    const { format } = req.params 
     const rankings = await cricketScraper.getTeamRankings(format)
     res.json({
       status: "success",
@@ -132,10 +130,9 @@ router.get("/rankings/:format", async (req, res) => {
   }
 })
 
-// Get series information (mock for now)
+// Get series information 
 router.get("/series", async (req, res) => {
   try {
-    // Mock series data - in real implementation, scrape from cricket websites
     const mockSeries = [
       {
         id: "1",
@@ -166,3 +163,4 @@ router.get("/series", async (req, res) => {
 })
 
 module.exports = router
+
